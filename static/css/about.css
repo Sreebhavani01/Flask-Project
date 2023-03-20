@@ -1,0 +1,19 @@
+body{
+    background-color: rgba(0, 0, 0, 0.301);
+}
+.g{
+    background-color: brown;
+    color: whitesmoke;
+}
+#ab{
+    font-family: algerian;
+}
+.li{
+    background-color: green;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 7px;
+    width: 320px;
+    margin-left: 14px;
+}
+

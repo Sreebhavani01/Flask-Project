@@ -1,0 +1,38 @@
+
+#con{
+    color: goldenrod;
+    font-size: 50px;
+}
+#mess{
+    color: brown;
+}
+#query{
+    height: 300px;
+    width: 400px;
+}
+#queryform{
+    background-color: dimgray;
+    padding: 30px;
+}
+#query-head{
+    background-color: lightcoral;
+}
+#contact{
+    background-color: rgba(139, 0, 0, 0.87);
+    width: 100%;
+    height: 600px;
+}
+#loc{
+    padding-top: 15px;
+}
+.a{
+    height: 25;
+    width: 200px;
+    border: 1px solid rgba(0, 0, 0, 0.397);
+}
+#e{
+    background-color: rgba(0, 128, 0, 0.705);
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+}

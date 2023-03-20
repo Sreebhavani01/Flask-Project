@@ -1,0 +1,28 @@
+body{
+    background-size: 1380px 750px;
+    background-image: url('/static/image/bgmodel3.avif');
+}
+.a{
+    width: 300px;
+    height: 40px;
+}
+#b{
+    background-color: rgba(105, 105, 105, 0.466);
+    width: 400px;
+    height: 500px;
+    margin-top: 50px;
+}
+#c{
+    padding: 15px;
+}
+#d{
+    background-color: rgba(165, 42, 42, 0.541);
+    width: 400px;
+    height: 60px;
+}
+#e{
+    background-color: rgba(0, 128, 0, 0.705);
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+}

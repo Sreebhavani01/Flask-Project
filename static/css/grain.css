@@ -1,0 +1,41 @@
+.he{
+    background-color: blueviolet;
+}
+#head{
+    font-family: algerian;
+}
+#biriyani{
+    background-color: rgba(137, 43, 226, 0.596);
+}
+.food{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: blue;
+}
+.combo{
+    font-family: brush script m7;
+    color: darkgoldenrod;
+}
+.combos{
+    font-family: Arial, Helvetica, sans-serif;
+    color: brown;
+}
+.rate{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: darkmagenta;
+}
+.ordernow{
+    background-color: green;
+    color: white;
+}
+.order{
+    color: white;
+}
+.btn1{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: gray;
+}
+.btn1 i:hover{
+    cursor: pointer;
+}

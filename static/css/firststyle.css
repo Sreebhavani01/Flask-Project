@@ -1,0 +1,11 @@
+body{
+    background-size: 1380px 680px;
+    background-image: url('/static/image/frontpage.jpg');
+}
+#welcome{
+    color: black;
+    font-size: 50px;
+    font-family: monotype corsiva;
+    margin-top: 25px;
+    font-style: bold;
+}

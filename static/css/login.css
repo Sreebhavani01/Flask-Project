@@ -1,0 +1,35 @@
+body{
+    background-size: 1400px 700px;
+    background-image: url('/static/image/bgmodel2.jpg');
+}
+#log{
+    background-color: rgba(244, 165, 96, 0.815);
+    height: 370px;
+    width: 400px;
+    margin-top: 100px;
+}
+#login{
+    background-color: rgba(165, 42, 42, 0.753);
+    height: 50px;
+    width: 400px;
+}
+#btnlogin{
+    background-color: blue;
+    border-radius: 5px;
+    color: burlywood;
+    font-family: 'Courier New', Courier, monospace;
+}
+#b{
+    font-size: 17px;
+}
+.a{
+    width: 270px;
+    height: 40px;
+    border: 3px solid rgba(0, 0, 0, 0.438);
+}
+#e{
+    background-color: rgba(0, 128, 0, 0.705);
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+}
