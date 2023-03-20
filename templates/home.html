@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;1,300;1,400;1,500;1,800&family=Rubik+Burned&family=Rubik+Iso&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+          <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="{{url_for('static',filename='image/veg.jpg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+              <h1 style="color: darkred; font-family: algerian;">Vegetarian</h1>
+              <button type="submit" style="background-color: rgba(0, 128, 0, 0.966); border: 2px;"><a href="veg">Get Started</a></button><br><br>
+              <p style="color: whitesmoke;font-family: jokerman;">Be a vegetarian, save a life</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('static',filename='image/ice.webp')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 style="color: darkred; font-family: algerian;">Ice Creams</h1>
+                <button type="submit" style="background-color: rgba(0, 128, 0, 0.966); border: 2px;"><a href="/ice">Get Started</a></button><br><br>
+                <p style="color: whitesmoke;font-family: jokerman;">Be chill always</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('static',filename='image/juice.jpg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 style="color: darkred; font-family: algerian;">juice</h1>
+                <button type="submit" style="background-color: rgba(0, 128, 0, 0.966); border: 2px;"><a href="/juice">Get Started</a></button><br><br>
+                <p style="color: whitesmoke;font-family: jokerman;">The joy of tasting nature</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('static',filename='image/coffee.jpg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 style="color: darkred; font-family: algerian;">Coffee</h1>
+                <button type="submit" style="background-color: rgba(0, 128, 0, 0.966); border: 2px;"><a href="/coffee">Get Started</a></button><br><br>
+                <p style="color: whitesmoke;font-family: jokerman;">Start a day with Coffee</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('static',filename='image/Non-Veg.jpeg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 style="color: darkred; font-family: algerian;">Non-Vegetarian</h1>
+                <button type="submit" style="background-color: rgba(0, 128, 0, 0.966); border: 2px;"><a href="/menu">Get Started</a></button><br><br>
+                <p style="color: whitesmoke;font-family: jokerman;">Feel like heaven by tasting the delicious</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('static',filename='image/noodles.jpg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 style="color: darkred; font-family: algerian;">Noodles</h1>
+                <button type="submit" style="background-color: rgba(0, 128, 0, 0.966); border: 2px;"><a href="/noodles">Get Started</a></button><br><br>
+                <p style="color: whitesmoke;font-family: jokerman;">Just taste new</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('static',filename='image/chocolates.jpg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 style="color: darkred; font-family: algerian;">Chocolates</h1>
+                <button type="submit" style="background-color: rgba(0, 128, 0, 0.966); border: 2px;"><a href="#">Get Started</a></button><br><br>
+                <p style="color: whitesmoke;font-family: jokerman;">Delight in every bite</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('static',filename='image/drinks.jpg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 style="color: darkred; font-family: algerian;">Cool Drinks</h1>
+                <button type="submit" style="background-color: rgba(0, 128, 0, 0.966); border: 2px;"><a href="/cooldrinks">Get Started</a></button><br><br>
+                <p style="color: whitesmoke;font-family: jokerman;">Be cool</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('static',filename='image/breakfast.jpg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 style="color: darkred; font-family: algerian;">Breakfast & Dinner</h1>
+                <button type="submit" style="background-color: rgba(0, 128, 0, 0.966); border: 2px;"><a href="/breakfast">Get Started</a></button><br><br>
+                <p style="color: whitesmoke;font-family: jokerman;">A healthy start to the day</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('static',filename='image/grainfood.jpg')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 style="color: darkred; font-family: algerian;">Grain Foods</h1>
+                <button type="submit" style="background-color: rgba(0, 128, 0, 0.966); border: 2px;"><a href="/grain">Get Started</a></button><br><br>
+                <p style="color: whitesmoke;font-family: jokerman;">Eat healthy</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="{{url_for('static',filename='image/vegpizza.avif')}}" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 style="color: darkred; font-family: algerian;">Pizza</h1>
+                <button type="submit" style="background-color: rgba(0, 128, 0, 0.966); border: 2px;"><a href="/pizza">Get Started</a></button><br><br>
+                <p style="color: whitesmoke;font-family: jokerman;">Taste the trend</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </button>
+      </div><br><br>
+
+    <div class="container" style="background-color: dodgerblue;">
+      <center><h1 style="font-family: vladimir script; font-size: 50px;">Popular dishes in our restaurant</h1></center>
+    </div><br><br>
+    <div class="container grid">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="content">
+            <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/chicken.jpg')}}" alt=""><br><br>
+            <h6>Chicken Biriyani</h6>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="content">
+            <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/chillichick.jpg')}}" alt=""><br><br>
+            <h6>Chilli Chicken</h6>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="content">
+            <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/mutton.jpg')}}" alt=""><br><br>
+            <h6>Mutton Biriyani</h6>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="content">
+            <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/eggmasala.jpg')}}" alt=""><br><br>
+            <h6>Egg Masala</h6>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="content">
+            <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/breadhalwa.jpg')}}" alt=""><br><br>
+            <h6>Bread Halwa</h6>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="content">
+            <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/chick65.jpg')}}" alt=""><br><br>
+            <h6>Chicken 65</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br><br>
+    <div class="container grid">
+    <div class="row">
+      <div class="col-sm-2">
+        <div class="content">
+          <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/shawarma.jpg')}}" alt=""><br><br>
+          <h6>Chicken Shawarma</h6>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="content">
+          <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/rasgulla.jpg')}}" alt=""><br><br>
+          <h6>Rasgulla</h6>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="content">
+          <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/vanila.jpg')}}" alt=""><br><br>
+          <h6>Vannila IceCream</h6>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="content">
+          <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/rosemilk.jpg')}}" alt=""><br><br>
+          <h6>Rose Milk</h6>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="content">
+          <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/watermelon.jpg')}}" alt=""><br><br>
+          <h6>Watermelon Juice</h6>
+        </div>
+      </div>
+      <div class="col-sm-2">
+        <div class="content">
+          <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/prawn.jpg')}}" alt=""><br><br>
+          <h6>Prawn Biriyani</h6>
+        </div>
+      </div>
+    </div>
+     </div> 
+    <br><br>
+    <div class="container grid">
+      <div class="row">
+        <div class="col-sm-2">
+          <div class="content">
+            <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/kfc.jpg')}}" alt=""><br><br>
+            <h6>KFC</h6>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="content">
+            <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/milkshak.jpg')}}" alt=""><br><br>
+            <h6>Milk Shake</h6>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="content">
+            <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/meals.jpg')}}" alt=""><br><br>
+            <h6>Curd Rise</h6>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="content">
+            <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/noodle.jpg')}}" alt=""><br><br>
+            <h6>Chicken Noodles</h6>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="content">
+            <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/poori.jpg')}}" alt=""><br><br>
+            <h6>Poori</h6>
+          </div>
+        </div>
+        <div class="col-sm-2">
+          <div class="content">
+            <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/pista.jpg')}}" alt=""><br><br>
+            <h6>Pista IceCream</h6>
+          </div>
+        </div>
+      </div>
+       </div><br><br>
+       <div class="container grid">
+        <div class="row">
+          <div class="col-sm-2">
+            <div class="content">
+              <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/padammilk.jpg')}}" alt=""><br><br>
+              <h6>Badam Milk</h6>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="content">
+              <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/palkova.jpg')}}" alt=""><br><br>
+              <h6>Palkova</h6>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="content">
+              <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/mango.jpg')}}" alt=""><br><br>
+              <h6>Mango Juice</h6>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="content">
+              <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/parotta.jpg')}}" alt=""><br><br>
+              <h6>Parotta</h6>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="content">
+              <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/gulab.jpg')}}" alt=""><br><br>
+              <h6>Gulab Jamun</h6>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="content">
+              <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/appam.jpg')}}" alt=""><br><br>
+              <h6>Dosa</h6>
+            </div>
+          </div>
+        </div>
+         </div> <br><br>
+         <div class="container grid">
+          <div class="row">
+            <div class="col-sm-2">
+              <div class="content">
+                <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/fried.jpg')}}" alt=""><br><br>
+                <h6>Chicken fried rice</h6>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="content">
+                <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/fish.jpg')}}" alt=""><br><br>
+                <h6>Fish Biriyani</h6>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="content">
+                <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/greent.jpg')}}" alt=""><br><br>
+                <h6>Green Tea</h6>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="content">
+                <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/lemoncor.jpg')}}" alt=""><br><br>
+                <h6>Lemon Coriander Soup</h6>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="content">
+                <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/blackcoffe.jpg')}}" alt=""><br><br>
+                <h6>Black Coffee</h6>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="content">
+                <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/grapes.jpeg')}}" alt=""><br><br>
+                <h6>Grapes Juice</h6>
+              </div>
+            </div>
+          </div>
+           </div> <br><br>
+           <div class="container grid">
+            <div class="row">
+              <div class="col-sm-2">
+                <div class="content">
+                  <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/beef.jpg')}}" alt=""><br><br>
+                  <h6>Beef Biriyani</h6>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="content">
+                  <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/chappathi.jpg')}}" alt=""><br><br>
+                  <h6>Chappathi</h6>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="content">
+                  <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/blackcurrant.jpg')}}" alt=""><br><br>
+                  <h6>Black Currant IceCream</h6>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="content">
+                  <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/cauli.jpg')}}" alt=""><br><br>
+                  <h6>Cauliflower Fry</h6>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="content">
+                  <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/grilled.jpg')}}" alt=""><br><br>
+                  <h6>Grilled Chicken</h6>
+                </div>
+              </div>
+              <div class="col-sm-2">
+                <div class="content">
+                  <img style="width: 100px; height: 100px;" src="{{url_for('static', filename='image/idly.jpg')}}" alt=""><br><br>
+                  <h6>Idly</h6>
+                </div>
+              </div>
+            </div>
+             </div> <hr><br><br>
+            <div class="container grid" style="background-color: rgba(0, 255, 255, 0.329);">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="content">
+                    <br><br><br><center><h1 style="font-family: 'Rubik Burned', cursive; color: darkgreen;">Best Food For <br>
+                    Your Taste <br></h1></center><br><br>
+                    <center><button style="background-color: rgba(255, 166, 0, 0.63); border-radius: 20px; " ><a style="text-decoration: none;color: blue;" href="/menu">View Menu</a></button></center>
+                  </div>
+                </div><br><br>
+                <div class="col-sm-6">
+                  <div class="content">
+                    <center><img style="width: 350px; height: 300px;" src="{{url_for('static',filename='image/homeimage1.webp')}}" alt=""></center>
+                  </div>
+                </div>
+              </div> 
+            </div> <br><br>
+            <center><h3 style="font-family: jokerman;">Extrodinary Food for <br>
+                        Extrodinary Experience</h3></center>  <br>
+            <div class="container grid" style="background-color: rgba(106, 142, 35, 0.24)">
+              <div class="row">
+                <div class="col-sm-6">
+                  <div class="content">
+                    <br><br><center><h1 style="font-family: 'Rubik burned',cursive; color: indigo;" >High Quality <br>
+                    Food Material <br></h1></center><br>
+                    <h6> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Food quality represents the sum of all properties and attributes of a food item that are acceptable to the customer. These food quality attributes include appearance, including size, shape, gloss, colour, and consistency, texture, flavour, and nutritional content.</h6>
+                  </div>
+                </div><br><br>
+                <div class="col-sm-6">
+                  <div class="content">
+                    <center><img style="width: 350px; height: 300px;" src="{{url_for('static',filename='image/homeimage3.jpg')}}" alt=""></center>
+                  </div>
+                </div>
+              </div> 
+            </div> <br><br> 
+            <center><h3 style="font-family: jokerman;">Variety Of Menu <br>
+              For You</h3></center>  <br>
+  <div class="container grid" style="background-color: rgba(255, 166, 0, 0.329)">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="content">
+          <br><br><center><h1 style="font-family: 'Rubik burned',cursive; color: crimson;">Taste the World's <br>
+           Heaven<br></h1></center><br>
+          <h6> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; The menu is a list of food and beverages offered to customers and the prices. A menu may be à la carte – which presents a list of options from which customers choose – or table d'hôte, in which case a pre-established sequence of courses is offered.</h6>
+        </div>
+      </div><br><br>
+      <div class="col-sm-6">
+        <div class="content">
+          <center><img style="width: 350px; height: 300px;" src="{{url_for('static',filename='image/homeimage4.jpg')}}" alt=""></center>
+        </div>
+      </div>
+    </div> 
+  </div> <br><br> 
+  <div class="container grid">
+  <div style="background-color: rgba(137, 43, 226, 0.336);"><center><h3 style="font-family: Brush script m7;">Discount upto 30%</h3></center></div>
+</div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+</body>
+</html>

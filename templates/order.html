@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/order.css')}}" class="css">
+    <script>
+        function order(){
+            alert("Your order has been placed successfully");
+        }
+    </script>
+</head>
+<body>
+    <div id="ord">
+        <div id="or">
+            <center><h1 id="o">Place Your Order Here</h1></center>
+        </div>
+        <form id="order" action="/ordersave" method="post">
+            <i> Name:</i> <input class="a" type="text" placeholder="Enter your name" name="name"><br><br>
+            <i> Dish name:</i> <input class="a" type="text" placeholder="Enter your dish name" name="dish"><br><br>
+            <i> Address:</i> <textarea class="a" name="address" placeholder="Enter your address"></textarea><br><br>
+            <i>Select a payment method: </i>  <br><br>
+            <center><input type="checkbox" name="cash"><i> Cash On Delivery</i> </center>
+            <center><input type="checkbox" name="online"><i> Online Payment </i></center>
+            <center><input type="checkbox" name="bank"><i> Bank transfer </i> </center><br><br>
+            <i> Quantity:</i> <input class="a" type="number" placeholder="Enter quantity" name="quantity"><br><br>
+           <i> Phone: </i> <input class="a" type="number" placeholder="Enter phone number" name="phone"><br><br>
+            <i> Amount:</i> <input class="a" type="number" placeholder="Enter Amount" name="amount"><br><br>
+            <i> Email: </i> <input class="a" type="email" placeholder="Enter your email" name="email"><br><br>
+            <i> Order Date:</i> <input class="a" type="date" name="date"><br><br>
+            <center><button id="sub" onclick="order()">Order Now </button></center>
+        </form>
+    </div>
+    <a style="padding-left: 20px;" href="/yourorder">View your order</a>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Noodles</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/noodles.css')}}" class="css">
+</head>
+<body>
+    <div class="container he">
+        <center><h1 id="head">Noodles & Fried Rice</h1></center>
+      </div><br>
+      <div class="container grid">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="content">
+              <h4 style="font-family: cursive;">&nbsp;&nbsp;           &nbsp; This helps to support healthy digestion. Nutritional storehouse: They provide you with the goodness of grains such as quinoa, red rice, buckwheat, millets etc which are rich in essential nutrients like iron, vitamin B, phosphorus, Magnesium and fiber.</h4>
+            </div>
+          </div>
+        </div><br><br>
+        <div id="biriyani"><h2 style="font-family: jokerman; padding: 5px;">Noodles & Fried Rice Special</h2></div><br>
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="content">
+              <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/noodle.jpg')}}" alt="">
+            </div>
+          </div>
+          <div class="col-sm-8">
+            <div class="content"><br>
+              <h3 class="food">Chicken Noodles</h3>
+              <h4 class="combo">Combo:</h4>
+              <h5 class="combos">Chicken Noodles, Tamarind sauce, Tomato sauce, Onion Rings, Panner</h5>
+              <h4 class="rate">Rate: 120 Rs</h4>
+              <h6 class="offer">25% Offer going on</h6>
+              <button class="ordernow"><a class="order" href="/order">Order Now</a></button>
+              <button id="btn" class="btn1" onclick="toggle()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+              </svg></button>
+              <script>
+                var btnh1 = document.getElementById('btn')
+                function toggle(){
+                  if(btnh1.style.color == 'red'){
+                    btnh1.style.color = 'gray'
+                  }
+                  else{
+                    btnh1.style.color = 'red'
+                  }
+                }
+              </script>
+            </div>
+          </div>
+        </div><hr>
+        <div class="row">
+            <div class="col-sm-4">
+              <div class="content">
+                <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/fried.jpg')}}" alt="">
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="content"><br>
+                <h3 class="food">Chinese Egg Fried Rice</h3>
+                <h4 class="combo">Combo:</h4>
+                <h5 class="combos">Chinese Egg Fried Rice, Tamarind sauce, Tomato sauce, Onion Rings, Panner</h5>
+                <h4 class="rate">Rate: 100 Rs</h4>
+                <h6 class="offer">25% Offer going on</h6>
+                <button class="ordernow"><a class="order" href="/order">Order Now</a></button>
+                <button id="btn1" class="btn1" onclick="toggle1()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                </svg></button>
+                <script>
+                  var btnh2 = document.getElementById('btn1')
+                  function toggle1(){
+                    if(btnh2.style.color == 'red'){
+                      btnh2.style.color = 'gray'
+                    }
+                    else{
+                      btnh2.style.color = 'red'
+                    }
+                  }
+                </script>
+              </div>
+            </div>
+          </div><hr>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="content">
+                <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/mush.jpg')}}" alt="">
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="content"><br>
+                <h3 class="food">Mushroom Fried Rice</h3>
+                <h4 class="combo">Combo:</h4>
+                <h5 class="combos">Mushroom Fried Rice, Tamarind sauce, Tomato sauce, Onion Rings, Panner</h5>
+                <h4 class="rate">Rate: 95 Rs</h4>
+                <h6 class="offer">30% Offer going on</h6>
+                <button class="ordernow"><a class="order" href="/order">Order Now</a></button>
+                <button id="btn2" class="btn1" onclick="toggle2()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                </svg></button>
+                <script>
+                  var btnh3 = document.getElementById('btn2')
+                  function toggle2(){
+                    if(btnh3.style.color == 'red'){
+                      btnh3.style.color = 'gray'
+                    }
+                    else{
+                      btnh3.style.color = 'red'
+                    }
+                  }
+                </script>
+              </div>
+            </div>
+          </div><hr>
+          <div class="row">
+            <div class="col-sm-4">
+              <div class="content">
+                <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/cauli.jpg')}}" alt="">
+              </div>
+            </div>
+            <div class="col-sm-8">
+              <div class="content"><br>
+                <h3 class="food">Cauli Flower Fry</h3>
+                <h4 class="combo">Combo:</h4>
+                <h5 class="combos">Cauli Flower Fry, Tamarind sauce, Tomato sauce, Onion Rings, Panner</h5>
+                <h4 class="rate">Rate: 60 Rs</h4>
+                <h6 class="offer">25% Offer going on</h6>
+                <button class="ordernow"><a class="order" href="/order">Order Now</a></button>
+                <button id="btn3" class="btn1" onclick="toggle3()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+                </svg></button>
+                <script>
+                  var btnh4 = document.getElementById('btn3')
+                  function toggle3(){
+                    if(btnh4.style.color == 'red'){
+                      btnh4.style.color = 'gray'
+                    }
+                    else{
+                      btnh4.style.color = 'red'
+                    }
+                  }
+                </script>
+              </div>
+            </div>
+          </div><hr>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+</body>
+</html>

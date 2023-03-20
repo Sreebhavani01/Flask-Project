@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/menu.css')}}" class="css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <a class="navbar-brand" href="#" style="font-family: jokerman;color: rgb(71, 255, 86);">MENU</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/menu" style="padding-left: 30px; color: darkred; ">Non-Veg<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/veg" style="padding-left: 30px; color: darkred;">Veg</a>
+            </li><br>
+            <li class="nav-item active">
+                <a class="nav-link" href="/breakfast" style="padding-left: 30px; color: darkred;">Breakfask & Dinner</a>
+              </li><br>
+            <li class="nav-item active">
+              <a class="nav-link" href="/ice" style="padding-left: 30px; color: darkred;">Ice Creams</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/juice" style="padding-left: 30px; color: darkred;">Juice</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/noodles" style="padding-left: 30px; color: darkred;">Noodles</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/cooldrinks" style="padding-left: 30px; color: darkred;">Cool Drinks</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/coffee" style="padding-left: 30px; color: darkred;">Coffee & Tea</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/dessert" style="padding-left: 30px; color: darkred;">Dessert</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/soup" style="padding-left: 30px; color: darkred;">Soup</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="/grain" style="padding-left: 30px; color: darkred;">Grain Foods</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/pizza" style="padding-left: 30px; color: darkred;">Pizza</a>
+        </li>
+          </ul>
+        </div>
+      </nav><br>
+
+    <div class="container he">
+      <center><h1 id="head">Non-Veg</h1></center>
+    </div><br>
+    <div class="container grid">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="content">
+            <h4 style="font-family: cursive;">&nbsp;&nbsp;         &nbsp; A non-vegetarian diet includes chicken, meat, eggs and fish. A non-vegetarian diet also has several health benefits because this type of food is rich in protein and vitamin B. Non-vegetarian food strengthens our muscles and helps them grow faster. It also helps to maintain body stamina and hemoglobin.</h4>
+          </div>
+        </div>
+      </div><br><br>
+      <div id="biriyani"><h2 style="font-family: jokerman; padding: 5px;">Biriyani Special</h2></div><br>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="content">
+            <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/chicken.jpg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="content">
+            <h3 class="food">Chicken Biriyani</h3>
+            <h4 class="combo">Combo:</h4>
+            <h5 class="combos">Chicken Biriyani, Tamarind sauce, Tomato sauce, Onion Rings, Bread Halwa, Mirchi, aloo, Panner</h5>
+            <h4 class="rate">Rate: 150 Rs</h4>
+            <h6 class="offer">25% Offer going on</h6>
+            <button class="ordernow"><a class="order" href="/order">Order Now</a></button> 
+            <button id="btn" class="btn1" onclick="toggle()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+            </svg></button>
+            <script>
+              var btnh1 = document.getElementById('btn')
+              function toggle(){
+                if(btnh1.style.color == 'red'){
+                  btnh1.style.color = 'gray'
+                }
+                else{
+                  btnh1.style.color = 'red'
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div><hr>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="content">
+            <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/mutton.jpg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="content">
+            <h3 class="food">Mutton Biriyani</h3>
+            <h4 class="combo">Combo:</h4>
+            <h5 class="combos">Mutton Biriyani, Tamarind sauce, Tomato sauce, Onion Rings, Bread Halwa, Mirchi, aloo, Panner</h5>
+            <h4 class="rate">Rate: 200 Rs</h4>
+            <h6 class="offer">20% Offer going on</h6>
+            <button class="ordernow"><a class="order" href="/order">Order Now</a></button>
+            <button id="btn1" class="btn1" onclick="toggle1()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+            </svg></button>
+            <script>
+              var btnh2 = document.getElementById('btn1')
+              function toggle1(){
+                if(btnh2.style.color == 'red'){
+                  btnh2.style.color = 'gray'
+                }
+                else{
+                  btnh2.style.color = 'red'
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="content">
+            <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/beef.jpg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="content">
+            <h3 class="food">Beef Biriyani</h3>
+            <h4 class="combo">Combo:</h4>
+            <h5 class="combos">Beef Biriyani, Mint chutney, Tomato sauce, Onion Raita, Bread Halwa, Mirchi,  Panner, Cucumber</h5>
+            <h4 class="rate">Rate: 250 Rs</h4>
+            <h6 class="offer">30% Offer going on</h6>
+            <button class="ordernow"><a class="order" href="/order">Order Now</a></button>
+            <button id="btn2" class="btn1" onclick="toggle2()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+            </svg></button>
+            <script>
+              var btnh3 = document.getElementById('btn2')
+              function toggle2(){
+                if(btnh3.style.color == 'red'){
+                  btnh3.style.color = 'gray'
+                }
+                else{
+                  btnh3.style.color = 'red'
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="content">
+            <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/prawn.jpg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="content">
+            <h3 class="food">Prawn Biriyani</h3>
+            <h4 class="combo">Combo:</h4>
+            <h5 class="combos">Prawn Biriyani, Cucumber Raita, Tomato sauce, Onion Rings, Bread Halwa, Mirchi, Egg salad, Panner</h5>
+            <h4 class="rate">Rate: 200 Rs</h4>
+            <h6 class="offer">25% Offer going on</h6>
+            <button class="ordernow"><a class="order" href="/order">Order Now</a></button>
+            <button id="btn3" class="btn1" onclick="toggle3()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+            </svg></button>
+            <script>
+              var btnh4 = document.getElementById('btn3')
+              function toggle3(){
+                if(btnh4.style.color == 'red'){
+                  btnh4.style.color = 'gray'
+                }
+                else{
+                  btnh4.style.color = 'red'
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="content">
+            <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/egg.jpg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="content">
+            <h3 class="food">Egg Biriyani</h3>
+            <h4 class="combo">Combo:</h4>
+            <h5 class="combos">Egg Biriyani, Tamarind sauce, Tomato sauce, Onion Rings, Bread Halwa, Mirchi, aloo, Panner</h5>
+            <h4 class="rate">Rate: 120 Rs</h4>
+            <h6 class="offer">25% Offer going on</h6>
+            <button class="ordernow"><a class="order" href="/order">Order Now</a></button>
+            <button id="btn4" class="btn1" onclick="toggle4()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+            </svg></button>
+            <script>
+              var btnh5 = document.getElementById('btn4')
+              function toggle4(){
+                if(btnh5.style.color == 'red'){
+                  btnh5.style.color = 'gray'
+                }
+                else{
+                  btnh5.style.color = 'red'
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div><hr>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="content">
+            <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/fish.jpg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="content">
+            <h3 class="food">Fish Biriyani</h3>
+            <h4 class="combo">Combo:</h4>
+            <h5 class="combos">Fish Biriyani, Fish fry, Tomato sauce, Onion Rings, Bread Halwa, Mirchi, Lemon, Panner</h5>
+            <h4 class="rate">Rate: 150 Rs</h4>
+            <h6 class="offer">20% Offer going on</h6>
+            <button class="ordernow"><a class="order" href="/order">Order Now</a></button>
+            <button id="btn5" class="btn1" onclick="toggle5()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+            </svg></button>
+            <script>
+              var btnh6 = document.getElementById('btn5')
+              function toggle5(){
+                if(btnh6.style.color == 'red'){
+                  btnh6.style.color = 'gray'
+                }
+                else{
+                  btnh6.style.color = 'red'
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div><hr>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="content">
+            <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/vegbiriyani.jpg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="content">
+            <h3 class="food">Veg Biriyani</h3>
+            <h4 class="combo">Combo:</h4>
+            <h5 class="combos">Veg Biriyani, Tomato sauce, Onion Rings, Bread Halwa, Mirchi, Brinjal thokku, Panner</h5>
+            <h4 class="rate">Rate: 130 Rs</h4>
+            <h6 class="offer">20% Offer going on</h6>
+            <button class="ordernow"><a class="order" href="/order">Order Now</a></button>
+            <button id="btn6" class="btn1" onclick="toggle6()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+            </svg></button>
+            <script>
+              var btnh7 = document.getElementById('btn6')
+              function toggle6(){
+                if(btnh7.style.color == 'red'){
+                  btnh7.style.color = 'gray'
+                }
+                else{
+                  btnh7.style.color = 'red'
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div><hr><br><br>
+      <div id="biriyani"><h2 style="font-family: jokerman; padding: 5px;">Chicken Special</h2></div><br>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="content">
+            <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/grilled.jpg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="content">
+            <h3 class="food"> Grilled Chicken</h3>
+            <h4 class="combo">Combo:</h4>
+            <h5 class="combos">Grilled Chicken, Tomato sauce, Onion Rings, Lemon, Mirchi, Mint Chutney, Panner</h5>
+            <h4 class="rate">Rate: 400 Rs</h4>
+            <h6 class="offer">25% Offer going on</h6>
+            <button class="ordernow"><a class="order" href="/order">Order Now</a></button>
+            <button id="btn7" class="btn1" onclick="toggle7()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+            </svg></button>
+            <script>
+              var btnh8 = document.getElementById('btn7')
+              function toggle7(){
+                if(btnh8.style.color == 'red'){
+                  btnh8.style.color = 'gray'
+                }
+                else{
+                  btnh8.style.color = 'red'
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div><hr>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="content">
+            <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/chick65.jpg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="content"><br>
+            <h3 class="food">Chicken 65</h3>
+            <h4 class="combo">Combo:</h4>
+            <h5 class="combos">Chicken 65, Tomato sauce, Onion Rings, Panner</h5>
+            <h4 class="rate">Rate: 50 Rs</h4>
+            <h6 class="offer">25% Offer going on</h6>
+            <button class="ordernow"><a class="order" href="/order">Order Now</a></button>
+            <button id="btn8" class="btn1" onclick="toggle8()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+            </svg></button>
+            <script>
+              var btnh9 = document.getElementById('btn8')
+              function toggle8(){
+                if(btnh9.style.color == 'red'){
+                  btnh9.style.color = 'gray'
+                }
+                else{
+                  btnh9.style.color = 'red'
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div><hr>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="content">
+            <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/shawarma.jpg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="content"><br>
+            <h3 class="food">Chicken Shawarma</h3>
+            <h4 class="combo">Combo:</h4>
+            <h5 class="combos">Chicken Shawarma, Tamarind sauce, Mirchi, aloo, Panner, Mint Chutney</h5>
+            <h4 class="rate">Rate: 150 Rs</h4>
+            <h6 class="offer">20% Offer going on</h6>
+            <button class="ordernow"><a class="order" href="/order">Order Now</a></button>
+            <button id="btn9" class="btn1" onclick="toggle9()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+            </svg></button>
+            <script>
+              var btnh10 = document.getElementById('btn9')
+              function toggle9(){
+                if(btnh10.style.color == 'red'){
+                  btnh10.style.color = 'gray'
+                }
+                else{
+                  btnh10.style.color = 'red'
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div><hr>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="content">
+            <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/chillichick.jpg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="content"><br>
+            <h3 class="food">Chilli Chicken</h3>
+            <h4 class="combo">Combo:</h4>
+            <h5 class="combos">Chilli Chicken, Tamarind sauce, Tomato sauce, Onion Rings, Mirchi, aloo, Panner</h5>
+            <h4 class="rate">Rate: 150 Rs</h4>
+            <h6 class="offer">25% Offer going on</h6>
+            <button class="ordernow"><a class="order" href="/order">Order Now</a></button>
+            <button id="btn10" class="btn1" onclick="toggle10()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+            </svg></button>
+            <script>
+              var btnh11 = document.getElementById('btn10')
+              function toggle10(){
+                if(btnh11.style.color == 'red'){
+                  btnh11.style.color = 'gray'
+                }
+                else{
+                  btnh11.style.color = 'red'
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div><hr>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="content">
+            <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/kfc.jpg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="content">
+            <h3 class="food">KFC</h3>
+            <h4 class="combo">Combo:</h4>
+            <h5 class="combos">KFC Gravy, Golden French Fries, Creamy Mash, Tomato sauce, Onion Rings, Corn Cob, Panner</h5>
+            <h4 class="rate">Rate: 300 Rs</h4>
+            <h6 class="offer">25% Offer going on</h6>
+            <button class="ordernow"><a class="order" href="/order">Order Now</a></button>
+            <button id="btn11" class="btn1" onclick="toggle11()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+            </svg></button>
+            <script>
+              var btnh12 = document.getElementById('btn11')
+              function toggle11(){
+                if(btnh12.style.color == 'red'){
+                  btnh12.style.color = 'gray'
+                }
+                else{
+                  btnh12.style.color = 'red'
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div><hr><br><br>
+      <div id="biriyani"><h2 style="font-family: jokerman; padding: 5px;">Egg Special</h2></div><br>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="content">
+            <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/halfboil.jpg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="content"><br>
+            <h3 class="food">Half Boil</h3>
+            <h4 class="combo">Combo:</h4>
+            <h5 class="combos">Half Boil, Mint Leaves, Tomato sauce, Pepper, Salt</h5>
+            <h4 class="rate">Rate: 10 Rs</h4>
+            <h6 class="offer">25% Offer going on</h6>
+            <button class="ordernow"><a class="order" href="/order">Order Now</a></button>
+            <button id="btn12" class="btn1" onclick="toggle12()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+            </svg></button>
+            <script>
+              var btnh13 = document.getElementById('btn12')
+              function toggle12(){
+                if(btnh13.style.color == 'red'){
+                  btnh13.style.color = 'gray'
+                }
+                else{
+                  btnh13.style.color = 'red'
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div><hr>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="content">
+            <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/eggmasala.jpg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="content"><br>
+            <h3 class="food">Onion Egg Masala</h3>
+            <h4 class="combo">Combo:</h4>
+            <h5 class="combos">Onion Egg Masala, Onion Rings, Lemon, Mirchi, Panner</h5>
+            <h4 class="rate">Rate: 30 Rs</h4>
+            <h6 class="offer">20% Offer going on</h6>
+            <button class="ordernow"><a class="order" href="/order">Order Now</a></button>
+            <button id="btn13" class="btn1" onclick="toggle13()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+            </svg></button>
+            <script>
+              var btnh14 = document.getElementById('btn13')
+              function toggle13(){
+                if(btnh14.style.color == 'red'){
+                  btnh14.style.color = 'gray'
+                }
+                else{
+                  btnh14.style.color = 'red'
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div><hr>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="content">
+            <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/boiledegg.jpg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="content"><br>
+            <h3 class="food">Boiled Egg</h3>
+            <h4 class="combo">Combo:</h4>
+            <h5 class="combos">Boiled Egg, Tomato sauce, Onion Rings</h5>
+            <h4 class="rate">Rate: 8 Rs</h4>
+            <h6 class="offer">25% Offer going on</h6>
+            <button class="ordernow"><a class="order" href="/order">Order Now</a></button>
+            <button id="btn14" class="btn1" onclick="toggle14()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+            </svg></button>
+            <script>
+              var btnh15 = document.getElementById('btn14')
+              function toggle14(){
+                if(btnh15.style.color == 'red'){
+                  btnh15.style.color = 'gray'
+                }
+                else{
+                  btnh15.style.color = 'red'
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div><hr>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="content">
+            <img style="width: 250px; height: 250px;" src="{{url_for('static',filename='image/omelette.jpg')}}" alt="">
+          </div>
+        </div>
+        <div class="col-sm-8">
+          <div class="content"><br>
+            <h3 class="food">Omelette</h3>
+            <h4 class="combo">Combo:</h4>
+            <h5 class="combos">Omelette, Tomato sauce, Onion Rings</h5>
+            <h4 class="rate">Rate: 25 Rs</h4>
+            <h6 class="offer">20% Offer going on</h6>
+            <button class="ordernow"><a class="order" href="/order">Order Now</a></button>
+            <button id="btn15" class="btn1" onclick="toggle15()" style="padding-left: 580px;"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" class="bi bi-heart-fill" viewBox="0 0 16 16">
+              <path fill-rule="evenodd" d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314z"/>
+            </svg></button>
+            <script>
+              var btnh16 = document.getElementById('btn15')
+              function toggle15(){
+                if(btnh16.style.color == 'red'){
+                  btnh16.style.color = 'gray'
+                }
+                else{
+                  btnh16.style.color = 'red'
+                }
+              }
+            </script>
+          </div>
+        </div>
+      </div><hr>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+</body>
+</html>
